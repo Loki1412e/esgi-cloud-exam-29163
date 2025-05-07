@@ -29,6 +29,7 @@ app.get('/', async function (req, res, next) {
 
 app.post('/', async function (req, res, next) {
   const {title, content} = req.body;
+  console.log('Données reçues :', req.body); // ALED
   try {
     await Article.create({ title, content });
   } catch (e) {}
